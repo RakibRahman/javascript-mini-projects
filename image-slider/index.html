@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <style>
+      .inner {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .inner img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .slideContainer {
+        border: 1px solid red;
+        width: 500px;
+        margin: 100px auto;
+        position: relative;
+      }
+      #prev {
+        position: absolute;
+        left: 0;
+      }
+      #next {
+        right: 0;
+        position: absolute;
+      }
+      .zoom {
+        width: 600px;
+        height: 400px;
+        background-color: red;
+      }
+      .zoom img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="zoom"></div>
+    <div class="slideContainer">
+      <div class="siema">
+        <div class="inner">
+          <img
+            src="../image-gallery/img/2.jpg"
+            alt="slider 
+                 3"
+          />
+        </div>
+        <div class="inner">
+          <img
+            src="../image-gallery/img/3.png"
+            alt="slider 
+                 3"
+          />
+        </div>
+        <div class="inner">
+          <img
+            src="../image-gallery/img/1.jpg"
+            alt="slider 
+                 3"
+          />
+        </div>
+      </div>
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script src="siema.min.js"></script>
+  <script>
+    const siema = new Siema({
+      selector: ".siema",
+      duration: 200,
+      easing: "cubic-bezier(.17,.67,.32,1.34)",
+      perPage: 1,
+      // perPage: {
+      //   400: 2,
+      //   1024: 5, //screen size : images/div number
+      // },
+      startIndex: 0,
+      draggable: true,
+      multipleDrag: true,
+      threshold: 20,
+      loop: true,
+      rtl: false,
+      onInit: () => {
+        console.log("working fine");
+      },
+      onChange: () => {},
+    });
+    //! button control
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.addEventListener("click", () => siema.prev());
+    next.addEventListener("click", () => siema.next());
+  </script>
+</html>

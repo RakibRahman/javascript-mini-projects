@@ -1,6 +1,5 @@
 const imgBox = document.querySelector(".siema");
-const zoom = document.querySelector(".zoom");
+const big = document.querySelector(".big");
 imgBox.addEventListener("click", (e) => {
-  zoom.innerHTML = `<img src="${e.target.src}" />`;
-  console.log(e.target.nodeName);
+  big.innerHTML = `<img src="${e.target.src}" />`;
 });

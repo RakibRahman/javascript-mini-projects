@@ -5,70 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
-    <style>
-      .inner {
-        font-size: 20px;
-        width: 100%;
-        text-align: center;
-      }
-
-      .inner img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-      .slideContainer {
-        border: 1px solid red;
-        width: 500px;
-        margin: 100px auto;
-        position: relative;
-      }
-      #prev {
-        position: absolute;
-        left: 0;
-      }
-      #next {
-        right: 0;
-        position: absolute;
-      }
-      .zoom {
-        width: 600px;
-        height: 400px;
-        background-color: red;
-      }
-      .zoom img {
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="zoom"></div>
-    <div class="slideContainer">
-      <div class="siema">
-        <div class="inner">
-          <img
-            src="../image-gallery/img/2.jpg"
-            alt="slider 
-                 3"
-          />
+    <div class="wrapper">
+      <div class="slideContainer">
+        <div class="siema">
+          <div class="inner">
+            <img
+              src="../image-gallery/img/2.jpg"
+              alt="slider 
+                   3"
+            />
+          </div>
+          <div class="inner">
+            <img
+              src="../image-gallery/img/3.png"
+              alt="slider 
+                   3"
+            />
+          </div>
+          <div class="inner">
+            <img
+              src="../image-gallery/img/1.jpg"
+              alt="slider 
+                   3"
+            />
+          </div>
         </div>
-        <div class="inner">
-          <img
-            src="../image-gallery/img/3.png"
-            alt="slider 
-                 3"
-          />
-        </div>
-        <div class="inner">
-          <img
-            src="../image-gallery/img/1.jpg"
-            alt="slider 
-                 3"
-          />
-        </div>
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
       </div>
-      <button id="prev">Prev</button>
-      <button id="next">Next</button>
+      <div class="big"></div>
     </div>
   </body>
   <script src="app.js"></script>

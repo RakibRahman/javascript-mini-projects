@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="w-full">
+    <main>
+      <button
+        id="subs"
+        class="
+          bg-green-400
+          px-5
+          py-2
+          tracking-widest
+          rounded-md
+          mx-auto
+          block
+          my-10
+          hover:bg-green-600
+          hover:text-white
+          font-bold
+        "
+      >
+        Subscribe
+      </button>
+      <div
+        id="modal"
+        class="
+          hidden
+          wrapper
+          bg-black
+          text-gray-200
+          w-4/12
+          px-10
+          py-8
+          text-center
+          relative
+          space-y-2
+          mx-auto
+          transition
+        "
+      >
+        <button id="close" class="absolute top-0 left-0 p-4">X</button>
+        <h1 class="text-4xl">Teach Me JavaScript</h1>
+        <p>Get Weekly awesome coding tips straight to your inbox.</p>
+        <p class="text-sm">No BS. Only quality goodies.</p>
+        <form class="form flex flex-col gap-4">
+          <p class="font-bold tracking-wide">Email:</p>
+          <input
+            class="ring-4 ring-white p-1"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email..."
+          />
+
+          <button
+            class="
+              bg-green-400
+              px-2
+              py-1
+              mt-2
+              w-20
+              mx-auto
+              rounded-xl
+              hover:bg-green-600
+            "
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

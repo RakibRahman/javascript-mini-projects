@@ -6,6 +6,7 @@ function toggleModal() {
   if (modal.classList.contains("hidden")) {
     modal.classList.toggle("block");
     modal.classList.toggle("hidden");
+    modal.classList.add("animate__animated", "animate__bounceInDown");
   }
 }
 function closeModal() {

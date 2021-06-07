@@ -1,6 +1,4 @@
 const content = document.getElementsByClassName("content");
-const symbol = document.querySelectorAll(".symbol");
-console.log(symbol);
 
 function toggleAccordion() {
   for (let item of content) {
